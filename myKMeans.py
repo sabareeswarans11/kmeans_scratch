@@ -1,6 +1,5 @@
 '''
 coding:UTF-8
-Assignment 2-CIS694/EEC693/CIS593 Deep Learning-2022 Spring
 k-means clustering scratch
 author: sabareeswaran shanmugam
 '''
@@ -10,8 +9,8 @@ import matplotlib.pyplot as plt
 from scipy.spatial.distance import cdist
 
 # Task :1
-################# 1 Implement your own kmeans clustering function myKmeans() (60 points) #################
-# Write your code here for your own kmeans clustering function
+################# 1 Implement your own kmeans clustering function myKmeans() #################
+
 def myKmeans(X, k, max_iteration):
     '''write your code here based on the algorithm described in class, and you cannot call other kmeans clustering packages here
     '''
@@ -48,11 +47,8 @@ def myKmeans(X, k, max_iteration):
         
     return center,mean_intra_cluster_distance,mean_inter_cluster_distance
 
-################# 2 Optimal K for your own kmeans clustering (30 points) #################
+################# 2 Optimal K for your own kmeans clustering #################
 
-# Write your code for a loop to call your own function myKmeans() by setting cluster_number=K from 2 to 10
-# print the ratio of mean_intra_cluster_distance over mean_inter_cluster_distance for each K.
-# print the optimal K with minimum ratio
 def optimal_K_find(fake_data):
     #k =[2,3,4,5,6,7,8,9,10]
     ratio_array = []
@@ -84,13 +80,13 @@ if __name__ == '__main__':
 
     # Task 2
     print("Executing Task 2 calling optimal_k_find function and setting cluster_number=K from 2 to 10")
-    ################# 2 Optimal K for your own kmeans clustering (30 points) #################
+    ################# 2 Optimal K for your own kmeans clustering  #################
     # calling optimal_k_find function and passing k from 2 to 10
     optimal_K_find(x)
 
     # Task 3
     print("Executing Task 3 Calling my own function myKmeans() by setting K=5 for visualization")
-    ################# 3 Call your own function myKmeans() by setting K=5 for visualization (10 points) #################
+    ################# 3 Call your own function myKmeans() by setting K=5 for visualization #################
     # Write your code to call your own function myKmeans() by K=5, and visulize the cluster results, which should be similar to the first figure
     labels, intra, inter = myKmeans(x, 5, 1000)
     cluster_labels =np.unique(labels)
