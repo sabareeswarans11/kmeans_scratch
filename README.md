@@ -1,4 +1,4 @@
-# kmeans_scratch with finding the optimal K with minimum ratio
+# kmeans_scratch ,finding the optimal K with minimum ratio
 1)	Randomly choosing Centroids
 2)	finding the distance between centroids and all the data points using Euclidean distance formula
 3)	Update the Centroid with the minimum Distance
